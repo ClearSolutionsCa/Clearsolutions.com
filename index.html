@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clear Solutions CA | Bin Cleaning & Pressure Washing Yuba City</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap');</style>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'DM Sans',sans-serif;background:#fff;color:#111}
@@ -191,10 +192,15 @@ footer a{color:#3b9eff;text-decoration:none}
 <script>
 function submitForm(){
   var f=document.getElementById('fname').value;
+  var l=document.getElementById('lname').value;
   var p=document.getElementById('phone').value;
   var s=document.getElementById('service').value;
   var c=document.getElementById('city').value;
+  var a=document.getElementById('address').value;
+  var n=document.getElementById('notes').value;
   if(!f||!p||!s||!c){alert('Please fill in your name, phone, city and service.');return;}
+  var msg='NEW LEAD - Clear Solutions CA!%0A%0AName: '+f+' '+l+'%0APhone: '+p+'%0ACity: '+c+'%0AService: '+s+'%0AAddress: '+a+'%0ANotes: '+n;
+  window.open('sms:5307017946?body='+msg);
   document.getElementById('success').style.display='block';
   document.querySelector('.submit-btn').style.display='none';
 }
